@@ -13,6 +13,7 @@ class SqAreaTest {
         double out = SqArea.square(p, k);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
+
     @Test
     void whenP4K1Square1() {
         int expected = 1;
@@ -21,6 +22,7 @@ class SqAreaTest {
         double out = SqArea.square(p, k);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
+
     @Test
     void whenP8K1Square4() {
         int expected = 4;
