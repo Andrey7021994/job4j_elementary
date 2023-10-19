@@ -26,7 +26,7 @@ class PointTest {
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
     @Test
-    void when00to64then7() {
+    void when00to64then7dot21() {
         double expected =7.21;
         int x1 = 0;
         int y1 = 0;
@@ -36,7 +36,7 @@ class PointTest {
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
     @Test
-    void when18to25then3() {
+    void when18to25then3dot16() {
         double expected =3.16;
         int x1 = 1;
         int y1 = 8;
@@ -46,7 +46,7 @@ class PointTest {
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
     @Test
-    void when52to43then1() {
+    void when52to43then1dot41() {
         double expected =1.41;
         int x1 = 5;
         int y1 = 2;
