@@ -24,3 +24,4 @@ public class MathCalculator {
         System.out.println("Результат расчета равен: " + maxsum(10, 20));
     }
 }
+
