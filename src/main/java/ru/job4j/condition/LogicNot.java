@@ -22,7 +22,7 @@ public class LogicNot {
     }
 
     public static boolean evenOrNotPositive(int num) {
-        return isEven(num) || !isPositive(num);
+        return isEven(num) || notPositive(num);
     }
 
     public static void main(String[] args) {
@@ -38,5 +38,5 @@ public class LogicNot {
         System.out.println(result5);
         boolean result6 = LogicNot.evenOrNotPositive(-4);
         System.out.println(result6);
-}
+    }
 }
