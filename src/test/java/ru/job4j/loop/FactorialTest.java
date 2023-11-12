@@ -21,3 +21,4 @@ class FactorialTest {
         assertThat(out).isEqualTo(expected);
     }
 }
+
