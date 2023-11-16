@@ -25,3 +25,4 @@ class CheckPrimeNumberTest {
         assertThat(result).isFalse();
     }
 }
+
