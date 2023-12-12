@@ -1,6 +1,7 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixCheckTest {
@@ -17,6 +18,18 @@ public class MatrixCheckTest {
     }
 
     @Test
+    public void whenHasNotMonoHorizontal() {
+        char[][] input = {
+                {' ', ' ', ' '},
+                {'X', ' ', 'X'},
+                {' ', ' ', ' '},
+        };
+        int row = 1;
+        boolean result = MatrixCheck.monoHorizontal(input, row);
+        assertThat(result).isFalse();
+    }
+
+    @Test
     public void whenHasMonoVertical() {
         char[][] input = {
                 {' ', ' ', 'X'},
@@ -26,5 +39,17 @@ public class MatrixCheckTest {
         int column = 2;
         boolean result = MatrixCheck.monoVertical(input, column);
         assertThat(result).isTrue();
+    }
+
+    @Test
+    public void whenHasNotMonoVertical() {
+        char[][] input = {
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+                {' ', ' ', ' '},
+        };
+        int column = 2;
+        boolean result = MatrixCheck.monoVertical(input, column);
+        assertThat(result).isFalse();
     }
 }
