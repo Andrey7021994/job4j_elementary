@@ -1,20 +1,43 @@
 package ru.job4j;
 
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+
 public class Point {
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+    private int x;
+
+    private int y;
+
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
+    }
+
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
     public static void main(String[] args) {
-        double result = Point.distance(0, 0, 2, 0);
-        System.out.println("result (0, 0) to (2, 0) " + result);
-        double result2 = Point.distance(0, 0, 5, 5);
-        System.out.println("result (0, 0) to (5, 5) " + result2);
-        double result3 = Point.distance(0, 0, 6, 4);
-        System.out.println("result (0, 0) to (6, 4) " + result3);
-        double result4 = Point.distance(1, 8, 2, 5);
-        System.out.println("result (1, 8) to (2, 5) " + result4);
-        double result5 = Point.distance(5, 2, 4, 3);
-        System.out.println("result (5, 2) to (4, 3) " + result5);
-}
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double distance1 = a.distance(b);
+        System.out.println(distance1);
+        Point a2 = new Point(0, 0);
+        Point b2 = new Point(5, 5);
+        double distance2 = a2.distance(b2);
+        System.out.println(distance2);
+        Point a3 = new Point(0, 0);
+        Point b3 = new Point(6, 4);
+        double distance3 = a3.distance(b3);
+        System.out.println(distance3);
+        Point a4 = new Point(1, 8);
+        Point b4 = new Point(2, 5);
+        double distance4 = a4.distance(b4);
+        System.out.println(distance4);
+        Point a5 = new Point(5, 2);
+        Point b5 = new Point(4, 3);
+        double distance5 = a5.distance(b5);
+        System.out.println(distance5);
+    }
 }
