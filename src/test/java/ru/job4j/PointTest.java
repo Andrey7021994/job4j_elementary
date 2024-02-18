@@ -17,9 +17,9 @@ class PointTest {
     @Test
     void when00to55then7() {
         double expected = 7.07;
-        Point a2 = new Point(0, 0);
-        Point b2 = new Point(5, 5);
-        double out = a2.distance(b2);
+        Point a2 = new Point(0, 0, 0);
+        Point b2 = new Point(0, 5, 5);
+        double out = a2.distance3d(b2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 
